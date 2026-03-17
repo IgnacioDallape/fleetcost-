@@ -805,7 +805,7 @@ function calcularViaje(){
           <div class="tm-tag">Diferencia</div>
           <div class="tm-val ${isAlto?'alto':'ok'}">${diff>0?'+':''}${diff.toFixed(1)} L</div>
           <div class="tm-sub">${diff>0?'más de lo esperado':diff<0?'menos de lo esperado':'exacto'}</div>
-          ${diff>0.05 && precioL>0 ? `<div style="margin-top:8px;padding:6px 8px;border-radius:6px;background:#FF6B6B10;border:1px solid #FF6B6B20;font-family:'JetBrains Mono',monospace;font-size:10px;color:#FF6B6B;">costo extra: ${fmtM(diff*precioL)}</div>` : ''}
+          ${diff>0.05 && precioL>0 ? `<div style="margin-top:8px;padding:6px 8px;border-radius:6px;background:#FF6B6B10;border:1px solid #FF6B6B20;font-family:'JetBrains Mono',monospace;font-size:10px;color:#FF6B6B;">costo extra: ${fmtM((diff/100)*vkm*precioL)}</div>` : ''}
         </div>` : ''}
       </div>
     </div>` : ''}
